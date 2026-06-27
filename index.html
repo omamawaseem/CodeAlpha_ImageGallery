@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A modern, responsive image gallery with category filters and lightbox viewer." />
+  <title>Luminary Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+<!-- page wrapper -->
+  <div class="page-wrapper" aria-label="Luminary Gallery application">
+
+    <header class="site-header" role="banner">
+
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">◈</span>
+        <div class="brand-text">
+          <h1 class="brand-name">Luminary</h1>
+          <p class="brand-tagline">A curated visual experience</p>
+        </div>
+      </div>
+
+      <nav class="filter-nav" role="navigation" aria-label="Image category filters">
+        <ul class="filter-list" role="list">
+
+          <li>
+            <button
+              class="filter-btn active"
+              data-filter="all"
+              aria-pressed="true"
+              aria-label="Show all images"
+            >
+              All
+            </button>
+          </li>
+
+          <li>
+            <button
+              class="filter-btn"
+              data-filter="nature"
+              aria-pressed="false"
+              aria-label="Filter by Nature"
+            >
+              Nature
+            </button>
+          </li>
+
+          <li>
+            <button
+              class="filter-btn"
+              data-filter="architecture"
+              aria-pressed="false"
+              aria-label="Filter by Architecture"
+            >
+              Architecture
+            </button>
+          </li>
+
+          <li>
+            <button
+              class="filter-btn"
+              data-filter="travel"
+              aria-pressed="false"
+              aria-label="Filter by Travel"
+            >
+              Travel
+            </button>
+          </li>
+
+          <li>
+            <button
+              class="filter-btn"
+              data-filter="abstract"
+              aria-pressed="false"
+              aria-label="Filter by Abstract"
+            >
+              Abstract
+            </button>
+          </li>
+
+        </ul>
+      </nav>
+
+    </header>
+
+
+
+    <!-- main content -->
+    <main id="main-content" role="main">
+
+      <section
+        class="gallery-grid"
+        id="gallery"
+        role="region"
+        aria-label="Image gallery"
+        aria-live="polite"
+        aria-atomic="false"
+      >
+
+        <!-- ── NATURE IMAGES ─────────────────────────────────── -->
+
+        <figure
+          class="gallery-card"
+          data-category="nature"
+          data-title="Misty Forest"
+          data-location="Pacific Northwest, USA"
+          tabindex="0"
+          role="button"
+          aria-label="View Misty Forest – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/nature/image 1.jfif"
+              alt="Dense misty forest with tall pine trees"
+              loading="lazy"
+              decoding="async"
+            />
+            <!-- Hover Overlay -->
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Misty Forest</p>
+                <span class="overlay-tag">Nature</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-card"
+          data-category="nature"
+          data-title="Alpine Meadow"
+          data-location="Swiss Alps, Switzerland"
+          tabindex="0"
+          role="button"
+          aria-label="View Alpine Meadow – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/nature/image 2.webp"
+              alt="Lush green alpine meadow surrounded by mountains"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Alpine Meadow</p>
+                <span class="overlay-tag">Nature</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-card"
+          data-category="nature"
+          data-title="Desert Dunes"
+          data-location="Sahara, Morocco"
+          tabindex="0"
+          role="button"
+          aria-label="View Desert Dunes – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/nature/image 3.webp"
+              alt="Golden sand dunes stretching to the horizon"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Desert Dunes</p>
+                <span class="overlay-tag">Nature</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-card"
+          data-category="nature"
+          data-title="Ocean Cliff"
+          data-location="Algarve, Portugal"
+          tabindex="0"
+          role="button"
+          aria-label="View Ocean Cliff – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/nature/image 4.webp"
+              alt="Rugged sea cliffs above turquoise ocean water"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Ocean Cliff</p>
+                <span class="overlay-tag">Nature</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <!-- ── ARCHITECTURE IMAGES ───────────────────────────── -->
+
+        <figure
+          class="gallery-card"
+          data-category="architecture"
+          data-title="Glass Tower"
+          data-location="Dubai, UAE"
+          tabindex="0"
+          role="button"
+          aria-label="View Glass Tower – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/architecture/image 1.jpg"
+              alt="Modern glass skyscraper reflecting blue sky"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Glass Tower</p>
+                <span class="overlay-tag">Architecture</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-card"
+          data-category="architecture"
+          data-title="Stone Cathedral"
+          data-location="Milan, Italy"
+          tabindex="0"
+          role="button"
+          aria-label="View Stone Cathedral – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/architecture/image 2.jpg"
+              alt="Gothic stone cathedral with intricate spires"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Stone Cathedral</p>
+                <span class="overlay-tag">Architecture</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-card"
+          data-category="architecture"
+          data-title="Minimal Interior"
+          data-location="Tokyo, Japan"
+          tabindex="0"
+          role="button"
+          aria-label="View Minimal Interior – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/architecture/image 3.jpg"
+              alt="Clean minimalist interior with warm light and concrete walls"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Minimal Interior</p>
+                <span class="overlay-tag">Architecture</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-card"
+          data-category="architecture"
+          data-title="Bridge at Dusk"
+          data-location="San Francisco, USA"
+          tabindex="0"
+          role="button"
+          aria-label="View Bridge at Dusk – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/architecture/image 4.jfif"
+              alt="Suspension bridge lit up at dusk against a purple sky"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Bridge at Dusk</p>
+                <span class="overlay-tag">Architecture</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <!-- ── TRAVEL IMAGES ─────────────────────────────────── -->
+
+        <figure
+          class="gallery-card"
+          data-category="travel"
+          data-title="Santorini Sunset"
+          data-location="Oia, Greece"
+          tabindex="0"
+          role="button"
+          aria-label="View Santorini Sunset – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/travel/image 1.jpg"
+              alt="White-washed buildings and blue domes of Santorini at sunset"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Santorini Sunset</p>
+                <span class="overlay-tag">Travel</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-card"
+          data-category="travel"
+          data-title="Kyoto Lanterns"
+          data-location="Kyoto, Japan"
+          tabindex="0"
+          role="button"
+          aria-label="View Kyoto Lanterns – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/travel/image 2.png"
+              alt="Row of paper lanterns lighting a temple path at night"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Kyoto Lanterns</p>
+                <span class="overlay-tag">Travel</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-card"
+          data-category="travel"
+          data-title="Moroccan Souk"
+          data-location="Marrakech, Morocco"
+          tabindex="0"
+          role="button"
+          aria-label="View Moroccan Souk – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/travel/image 3.jpg"
+              alt="Colorful spices and textiles in a vibrant market alley"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Moroccan Souk</p>
+                <span class="overlay-tag">Travel</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-card"
+          data-category="travel"
+          data-title="Moroccan Souk"
+          data-location="Marrakech, Morocco"
+          tabindex="0"
+          role="button"
+          aria-label="View Moroccan Souk – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/travel/image 4.webp"
+              alt="Colorful spices and textiles in a vibrant market alley"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Moroccan Souk</p>
+                <span class="overlay-tag">Travel</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <!-- ── ABSTRACT IMAGES ───────────────────────────────── -->
+
+        <figure
+          class="gallery-card"
+          data-category="abstract"
+          data-title="Liquid Chrome"
+          data-location="Digital Art Series"
+          tabindex="0"
+          role="button"
+          aria-label="View Liquid Chrome – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/abstract/image 1.jpg"
+              alt="Abstract flowing chrome metallic shapes"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Liquid Chrome</p>
+                <span class="overlay-tag">Abstract</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-card"
+          data-category="abstract"
+          data-title="Colour Wash"
+          data-location="Digital Art Series"
+          tabindex="0"
+          role="button"
+          aria-label="View Colour Wash – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/abstract/image 2.webp"
+              alt="Abstract watercolour wash with blending blues and purples"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Colour Wash</p>
+                <span class="overlay-tag">Abstract</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-card"
+          data-category="abstract"
+          data-title="Geometric Tension"
+          data-location="Digital Art Series"
+          tabindex="0"
+          role="button"
+          aria-label="View Geometric Tension – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/abstract/image 3.jpg"
+              alt="Sharp geometric shapes overlapping in bold contrast"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Geometric Tension</p>
+                <span class="overlay-tag">Abstract</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-card"
+          data-category="abstract"
+          data-title="Neon Drift"
+          data-location="Digital Art Series"
+          tabindex="0"
+          role="button"
+          aria-label="View Neon Drift – click to enlarge"
+        >
+          <div class="card-image-wrap">
+            <img
+              src="images/abstract/image 4.jpg"
+              alt="Neon light trails drifting across a dark background"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-overlay" aria-hidden="true">
+              <div class="overlay-content">
+                <span class="overlay-icon"><i class="ri-zoom-in-line"></i></span>
+                <p class="overlay-title">Neon Drift</p>
+                <span class="overlay-tag">Abstract</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+      </section>
+      <!-- /gallery-grid -->
+
+      <div class="empty-state" id="emptyState" role="status" aria-live="polite" hidden>
+        <i class="ri-image-2-line" aria-hidden="true"></i>
+        <p>No images in this category yet.</p>
+        <button class="filter-btn active" data-filter="all">Show all images</button>
+      </div>
+
+    </main>
+    <!-- main content -->
+
+
+    <!-- LIGHTBOX OVERLAY -->
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image lightbox viewer"
+      aria-hidden="true"
+    >
+
+      <div class="lightbox-backdrop" id="lightboxBackdrop" aria-hidden="true"></div>
+
+      <div class="lightbox-dialog" role="document">
+
+        <div class="lightbox-top-bar">
+          <span class="lb-counter" id="lbCounter" aria-live="polite" aria-atomic="true">
+            1 / 15
+          </span>
+          <button
+            class="lb-close"
+            id="lbClose"
+            aria-label="Close lightbox"
+            title="Close (Esc)"
+          >
+            <i class="ri-close-line" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="lightbox-stage">
+
+          <button
+            class="lb-arrow lb-prev"
+            id="lbPrev"
+            aria-label="Previous image"
+            title="Previous (←)"
+          >
+            <i class="ri-arrow-left-s-line" aria-hidden="true"></i>
+          </button>
+
+          <div class="lightbox-img-wrap">
+            <img
+              class="lb-image"
+              id="lbImage"
+              src=""
+              alt=""
+              decoding="async"
+            />
+          </div>
+
+          <button
+            class="lb-arrow lb-next"
+            id="lbNext"
+            aria-label="Next image"
+            title="Next (→)"
+          >
+            <i class="ri-arrow-right-s-line" aria-hidden="true"></i>
+          </button>
+
+        </div>
+
+        <figcaption class="lightbox-caption">
+          <p class="lb-title" id="lbTitle"></p>
+          <p class="lb-location" id="lbLocation">
+            <i class="ri-map-pin-line" aria-hidden="true"></i>
+            <span id="lbLocationText"></span>
+          </p>
+        </figcaption>
+
+      </div>
+
+    </div>
+
+
+    <!--  FOOTER -->
+         
+    <footer class="site-footer" role="contentinfo">
+      <p class="footer-hint">
+        <i class="ri-keyboard-line" aria-hidden="true"></i>
+        Use <kbd>←</kbd> <kbd>→</kbd> to navigate · <kbd>Esc</kbd> to close
+      </p>
+      <p class="footer-credit">
+        Luminary Gallery &mdash; built with HTML, CSS &amp; JavaScript
+      </p>
+    </footer>
+    <!-- footer -->
+
+  </div>
+  <!-- /page-wrapper -->
+
+  <script src="js/gallery.js"></script>
+
+</body>
+</html>
